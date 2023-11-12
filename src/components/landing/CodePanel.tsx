@@ -20,7 +20,7 @@ const CodeBlock = ({ text, color, setDoneRendering }: CodeBlockProps) => {
   };
 
   useEffect(() => {
-    const intervalId = setInterval(renderNextChar, 40);
+    const intervalId = setInterval(renderNextChar, 50);
     setRenderIntervalId(intervalId);
 
     return () => clearInterval(intervalId);
@@ -34,7 +34,11 @@ const CodeBlock = ({ text, color, setDoneRendering }: CodeBlockProps) => {
   }, [renderedIdx]);
 
   return (
-    <p className={`font-mono text-${color}-500 whitespace-pre text-2xl`}>
+    <p
+      className={`font-mono text-${color}-500 whitespace-pre text-2xl ${
+        renderedIdx < text.length ? "after:content-['|']" : ""
+      }`}
+    >
       {text.substring(0, renderedIdx)}
     </p>
   );
@@ -76,7 +80,7 @@ const CodeRenderer = ({ codeBlocks }: CodeRendererProps) => {
 
 export const CodePanel = () => {
   return (
-    <div className="border-2 border-gray-700 p-4 rounded-xl">
+    <div className="border-2 border-gray-700 bg-black p-4 rounded-xl w-full min-h-[60%] m-auto">
       {<CodeRenderer codeBlocks={code} />}
     </div>
   );
