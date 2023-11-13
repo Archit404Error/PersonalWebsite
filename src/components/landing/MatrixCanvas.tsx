@@ -11,7 +11,7 @@ export const MatrixCanvas = () => {
   };
 
   const randomChar = () => {
-    return String.fromCharCode(randInt(65, 100));
+    return String.fromCharCode(randInt(50, 120));
   };
 
   const draw = (
@@ -19,16 +19,16 @@ export const MatrixCanvas = () => {
     canvWidth: number,
     canvHeight: number
   ) => {
-    ctx.fillStyle = "rgba(0, 0, 0, 0.1)";
+    ctx.fillStyle = "rgba(14, 17, 22, 0.4)";
     ctx.fillRect(0, 0, canvWidth, canvHeight);
 
-    if (dropArrs.length < canvWidth / 10 && randInt(1, 5) == 1) {
+    if (dropArrs.length < canvWidth / 4 && randInt(1, 2) == 1) {
       const newCol = randInt(0, canvWidth);
       dropArrs.push([newCol, 0]);
     }
 
     for (const dropArr of dropArrs) {
-      ctx.font = "10px san-serif";
+      ctx.font = "8px san-serif";
       ctx.fillStyle = "#00ff00";
       ctx.fillText(randomChar(), dropArr[0], dropArr[1]);
       dropArr[1] += 10;
