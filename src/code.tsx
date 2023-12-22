@@ -4,7 +4,7 @@ export interface CodeBlock {
 }
 
 export const code: CodeBlock[] = [
-  { text: "// About Me!\n", color: "gray" },
+  { text: "\n// About Me!\n", color: "gray" },
   { text: "var Archit = {", color: "white" },
   { text: "\t//Background", color: "gray" },
   { text: "\teducation: 'Cornell University',", color: "white" },

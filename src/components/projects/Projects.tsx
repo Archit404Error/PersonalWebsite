@@ -1,18 +1,79 @@
+"use client";
+
+import { RevealWrapper } from "next-reveal";
+import { Project } from "./Project";
+
+interface Project {
+  title: string;
+  description: string;
+  image: string;
+  url?: string;
+  appStore?: string;
+  github?: string;
+  impact?: string;
+}
+
+const projectData: Project[] = [
+  {
+    title: "Cornell Courses",
+    description:
+      "Cornell Courses is a website that utilizes Machine Learning and Natural Language Processing to aid students in discovering interesting courses based on natural language queries. Made with React, Flask, and Gensim, hosted on Google Cloud.",
+    image: "/projects/semantic_search_mac.png",
+    url: "https://cornellcourses.org",
+    github: "https://github.com/Archit404Error/SemanticClassSearch",
+  },
+  {
+    title: "Yolo: Social Events",
+    description:
+      "Yolo is the first social media app built around your calendar. It's designed to help you find fun events on campus and make friends with similar interests, and it's launching at Cornell University in Fall 2022!",
+    image: "/projects/yolo_proj.png",
+    appStore: "https://apps.apple.com/us/app/yolo-cornell-events/id1618863681",
+    github: "https://github.com/Archit404Error/YoloMobile",
+    impact: "300+ Daily Active Users, 1000+ Users",
+  },
+  {
+    title: "Newsflash: Unbiased News",
+    description:
+      "NewsFlash is a website and mobile app that helps identify and remove news bias. It displays top headlines(and their bias) as well as  an analysis of multiple articles across the web on a given topic.",
+    image: "/projects/newsflash_mac.png",
+    url: "http://3.84.0.201:8000/",
+    appStore:
+      "https://apps.apple.com/us/app/newsflash-unbiased-news/id1578807973",
+    impact: "1,000+ Users; 50,000+ Articles Analyzed",
+  },
+  {
+    title: "PriceMerge",
+    description:
+      "PriceMerge empowers users to find the cheapest products and combat price hiking by comparing product prices across thousands of websites and automatically showing the cheapest price.",
+    image: "/projects/pricemerge_mac.png",
+    github: "https://github.com/Archit404Error/PriceMerge",
+    impact: "25,000+ Users; 200,000+ Searches; Featured on national news",
+  },
+];
+
 export const Projects = () => {
   return (
-    <div className="snap-y snap-mandatory h-screen overflow-scroll">
-      <div className="snap-start bg-amber-200 w-screen h-screen flex items-center justify-center text-8xl">
-        1
+    <div className="mt-10 bg-black">
+      <div className="grid grid-cols-9">
+        <div className="col-start-2 col-span-5 mt-20 mb-10">
+          <RevealWrapper origin="bottom">
+            <h1 className="text-3xl bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text">
+              Engineering the Future.
+            </h1>
+          </RevealWrapper>
+          <RevealWrapper origin="top">
+            <h1 className="text-section">Coding Projects</h1>
+          </RevealWrapper>
+        </div>
       </div>
-      <div className="snap-start bg-teal-200 w-screen  h-screen flex items-center justify-center text-8xl">
-        2
-      </div>
-      <div className="snap-start bg-cyan-200 w-screen h-screen flex items-center justify-center text-8xl">
-        3
-      </div>
-      <div className="snap-start bg-fuchsia-200 w-screen h-screen flex items-center justify-center text-8xl">
-        4
-      </div>
+      {projectData.map((projectData) => (
+        <div
+          key={projectData.title}
+          className="bg-black mb-10 flex items-center justify-center text-8xl"
+        >
+          <Project {...projectData} />
+        </div>
+      ))}
     </div>
   );
 };
