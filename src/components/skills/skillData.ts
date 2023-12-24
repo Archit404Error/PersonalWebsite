@@ -166,12 +166,12 @@ export const skills: SkillCardProps[] = [
       },
       {
         name: "C++",
-        subtitle: "Highly Experienced",
+        subtitle: "Experienced",
         imageUrl: "/logos/cpp.png",
       },
       {
         name: "JavaScript & TypeScript",
-        subtitle: "Highly Experienced",
+        subtitle: "Experienced",
         imageUrl: "/logos/javascript.png",
       },
     ],

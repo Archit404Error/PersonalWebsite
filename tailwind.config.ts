@@ -8,7 +8,18 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
     "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
   ],
-  safelist: ["text-gray", "text-white", "text-blue-500"],
+  safelist: [
+    "text-gray",
+    "text-white",
+    "text-blue-500",
+    "delay-0",
+    "delay-200",
+    "delay-400",
+    "delay-600",
+    "delay-800",
+    "delay-1000",
+    "delay-1200",
+  ],
   theme: {
     extend: {
       backgroundImage: {
@@ -22,6 +33,20 @@ const config: Config = {
       fontSize: {
         section: "5.5rem",
       },
+      transitionDelay: {
+        "0": "0ms",
+        "200": "200ms",
+        "400": "400ms",
+        "600": "600ms",
+        "800": "800ms",
+        "1000": "1000ms",
+        "1200": "1200ms",
+      },
+    },
+  },
+  variants: {
+    extend: {
+      transitionDelay: ["transform"],
     },
   },
   darkMode: "class",

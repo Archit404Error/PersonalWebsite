@@ -47,6 +47,6 @@ export const MatrixCanvas = () => {
   }, []);
 
   return (
-    <canvas className="absolute z-0 w-full h-screen top-0" ref={canvasRef} />
+    <canvas className="absolute z-0 w-full h-screen top-16" ref={canvasRef} />
   );
 };

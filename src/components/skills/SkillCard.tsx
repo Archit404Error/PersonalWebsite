@@ -1,7 +1,8 @@
 "use client";
 
+import { useIsVisibleOnce } from "@/hooks/useIsVisibleOnce";
 import { Card, CardBody, CardHeader, Divider, Image } from "@nextui-org/react";
-import { RevealWrapper } from "next-reveal";
+import { useRef } from "react";
 
 interface Skill {
   imageUrl: string;
@@ -16,8 +17,16 @@ export interface SkillCardProps {
 }
 
 export const SkillCard = ({ skillType, skills, delay }: SkillCardProps) => {
+  const cardRef = useRef(null);
+  const cardVisible = useIsVisibleOnce(cardRef);
+
   return (
-    <RevealWrapper className={"col-span-3"} delay={delay}>
+    <div
+      ref={cardRef}
+      className={`col-span-3 ease-in transition-all ${
+        cardVisible ? "translate-y-0" : "translate-y-32"
+      } ${cardVisible ? "opacity-100" : "opacity-0"} delay-${delay}`}
+    >
       <Card className="bg-[#18181b] text-white">
         <CardHeader className="flex">
           <div className="pl-2 pt-5">
@@ -43,6 +52,6 @@ export const SkillCard = ({ skillType, skills, delay }: SkillCardProps) => {
           ))}
         </CardBody>
       </Card>
-    </RevealWrapper>
+    </div>
   );
 };

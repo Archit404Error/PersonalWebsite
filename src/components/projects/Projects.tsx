@@ -1,6 +1,6 @@
 "use client";
 
-import { RevealWrapper } from "next-reveal";
+import { SectionHeader } from "../text/SectionHeader";
 import { Project } from "./Project";
 
 interface Project {
@@ -25,8 +25,8 @@ const projectData: Project[] = [
   {
     title: "Yolo: Social Events",
     description:
-      "Yolo is the first social media app built around your calendar. It's designed to help you find fun events on campus and make friends with similar interests, and it's launching at Cornell University in Fall 2022!",
-    image: "/projects/yolo_proj.png",
+      "Yolo is the first social media app built around your calendar. It's designed to help you find fun events on campus and make friends with similar interests, and launched at Cornell in Fall 2022!",
+    image: "/projects/yolo_phone.png",
     appStore: "https://apps.apple.com/us/app/yolo-cornell-events/id1618863681",
     github: "https://github.com/Archit404Error/YoloMobile",
     impact: "300+ Daily Active Users, 1000+ Users",
@@ -53,17 +53,13 @@ const projectData: Project[] = [
 
 export const Projects = () => {
   return (
-    <div className="mt-10 bg-black">
+    <div id="projects" className="mt-10 bg-black">
       <div className="grid grid-cols-9">
         <div className="col-start-2 col-span-5 mt-20 mb-10">
-          <RevealWrapper origin="bottom">
-            <h1 className="text-3xl bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text">
-              Engineering the Future.
-            </h1>
-          </RevealWrapper>
-          <RevealWrapper origin="top">
-            <h1 className="text-section">Coding Projects</h1>
-          </RevealWrapper>
+          <SectionHeader
+            subtitle="Engineering the Future."
+            title="Coding Projects"
+          />
         </div>
       </div>
       {projectData.map((projectData) => (
