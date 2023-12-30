@@ -8,7 +8,7 @@ import Image from "next/image";
 
 export const IntroCard = () => {
   return (
-    <div className="flex flex-col items-center text-center justify-center p-10">
+    <div className="flex flex-col items-center text-center justify-center p-10 col-span-2 md:col-span-1">
       <Image
         alt="Archit Mehta, programmer, entrepreneur, and student."
         width="350"
@@ -16,7 +16,7 @@ export const IntroCard = () => {
         src={"/Archit_Headshot.jpg"}
         className="rounded-xl mb-4"
       />
-      <h1 className="sm:text-3xl md:text-6xl mb-4">Archit Mehta</h1>
+      <h1 className="text-5xl md:text-6xl mb-4">Archit Mehta</h1>
       <div className="flex space-x-10">
         <a target="_blank" href="https://www.instagram.com/archit_mehta/?hl=en">
           <FontAwesomeIcon icon={faInstagram} size="3x" className="flex-1" />

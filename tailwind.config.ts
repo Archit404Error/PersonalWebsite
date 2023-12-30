@@ -42,6 +42,9 @@ const config: Config = {
         "1000": "1000ms",
         "1200": "1200ms",
       },
+      screens: {
+        macpro: "1512px",
+      },
     },
   },
   variants: {

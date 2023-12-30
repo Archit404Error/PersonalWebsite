@@ -24,9 +24,9 @@ export const ExperienceCard = ({
         alt={`Archit Mehta: ${title} ${organization}`}
         width={300}
         height={300}
-        className="col-start-1 col-span-4 rounded-xl"
+        className="col-span-4 rounded-xl"
       />
-      <div className="col-span-8">
+      <div className="col-span-12 lg:col-start-6 lg:col-span-6 macpro:col-span-8">
         <p className="text-3xl font-semibold">{title}</p>
         <p className="text-xl font-thin mb-2">
           {organization} ({startDate} - {endDate})

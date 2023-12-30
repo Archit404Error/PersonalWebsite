@@ -8,7 +8,7 @@ export const Skills = () => {
   return (
     <div id="skills">
       <div className="grid grid-cols-9 mt-32">
-        <div className="col-start-2 col-span-5">
+        <div className="col-start-2 col-span-7 xl:col-start-2 xl:col-span-5">
           <SectionHeader
             subtitle="An Abundance of Experience."
             title="Technical Experience"

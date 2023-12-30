@@ -65,7 +65,7 @@ export const Projects = () => {
       {projectData.map((projectData) => (
         <div
           key={projectData.title}
-          className="bg-black mb-10 flex items-center justify-center text-8xl"
+          className="bg-black mb-10 flex items-center justify-center"
         >
           <Project {...projectData} />
         </div>

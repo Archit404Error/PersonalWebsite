@@ -27,20 +27,20 @@ export const Project = ({
 }: ProjectProps) => {
   return (
     <RevealWrapper>
-      <div className="pr-10 pl-10">
-        <div className="inline-block bg-gradient-to-br from-[#011f3d] via-[#1d4975] to-[#366a9e] pt-10 pb-10 rounded-xl">
-          <div className="grid grid-cols-12 gap-20">
-            <div className="col-start-2 col-span-5 flex items-center">
+      <div className="md:pr-10 md:pl-10">
+        <div className="bg-gradient-to-br from-[#011f3d] via-[#1d4975] to-[#366a9e] pt-10 pb-10 rounded-xl">
+          <div className="pl-3 md:pl-0 md:grid md:grid-cols-12 gap-20">
+            <div className="col-span-12 xl:col-start-2 xl:col-span-5 flex items-center justify-center">
               <Image
                 alt={description}
                 src={image}
                 width={500}
                 height={500}
-                style={{ width: "100%", height: "100%" }}
+                className="md:w-[50%] md:h-full xl:w-full xl:h-full"
               />
             </div>
-            <div className="col-span-5">
-              <h1 className="text-5xl mb-4">{title}</h1>
+            <div className="col-start-3 col-span-9 md:col-start-2 md:col-span-10 xl:col-span-5">
+              <h1 className="text-4xl md:text-5xl mb-4">{title}</h1>
               <div className="flex flex-row gap-5">
                 {url && (
                   <RoundButton
@@ -64,9 +64,11 @@ export const Project = ({
                   />
                 )}
               </div>
-              <p className="text-2xl mt-4">{description}</p>
+              <p className="text-xl md:text-2xl mt-4">{description}</p>
               {impact && (
-                <p className="text-2xl mt-5 font-semibold">Impact: {impact}</p>
+                <p className="text-xl md:text-2xl mt-5 font-semibold">
+                  Impact: {impact}
+                </p>
               )}
             </div>
           </div>

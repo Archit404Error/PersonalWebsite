@@ -35,7 +35,7 @@ const CodeBlock = ({ text, color, setDoneRendering }: CodeBlockProps) => {
 
   return (
     <p
-      className={`font-mono text-${color} whitespace-pre text-3xl ${
+      className={`font-mono text-${color} whitespace-pre text-sm md:text-lg lg:text-2xl macpro:text-3xl ${
         renderedIdx < text.length ? "after:content-['|']" : ""
       }`}
     >
@@ -80,7 +80,7 @@ const CodeRenderer = ({ codeBlocks }: CodeRendererProps) => {
 
 export const CodePanel = () => {
   return (
-    <div className="border-2 border-gray-700 bg-black p-4 rounded-xl w-full min-h-[60%] m-auto">
+    <div className="border-2 border-gray-700 bg-black p-4 rounded-xl w-full min-h-[60%] m-auto invisible md:visible">
       {<CodeRenderer codeBlocks={code} />}
     </div>
   );

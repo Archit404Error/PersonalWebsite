@@ -23,7 +23,7 @@ export const SkillCard = ({ skillType, skills, delay }: SkillCardProps) => {
   return (
     <div
       ref={cardRef}
-      className={`col-span-3 ease-in transition-all ${
+      className={`col-span-12 md:col-span-4 lg:col-span-3 ease-in transition-all ${
         cardVisible ? "translate-y-0" : "translate-y-32"
       } ${cardVisible ? "opacity-100" : "opacity-0"} delay-${delay}`}
     >
