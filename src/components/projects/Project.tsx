@@ -40,7 +40,7 @@ export const Project = ({
               />
             </div>
             <div className="col-span-5">
-              <h1 className="text-6xl mb-4">{title}</h1>
+              <h1 className="text-5xl mb-4">{title}</h1>
               <div className="flex flex-row gap-5">
                 {url && (
                   <RoundButton
@@ -64,9 +64,9 @@ export const Project = ({
                   />
                 )}
               </div>
-              <p className="text-3xl mt-4">{description}</p>
+              <p className="text-2xl mt-4">{description}</p>
               {impact && (
-                <p className="text-3xl mt-5 font-semibold">Impact: {impact}</p>
+                <p className="text-2xl mt-5 font-semibold">Impact: {impact}</p>
               )}
             </div>
           </div>

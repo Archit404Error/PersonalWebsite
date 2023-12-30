@@ -11,12 +11,12 @@ export const IntroCard = () => {
     <div className="flex flex-col items-center text-center justify-center p-10">
       <Image
         alt="Archit Mehta, programmer, entrepreneur, and student."
-        width="400"
-        height="400"
+        width="350"
+        height="350"
         src={"/Archit_Headshot.jpg"}
         className="rounded-xl mb-4"
       />
-      <h1 className="sm:text-3xl md:text-7xl mb-4">Archit Mehta</h1>
+      <h1 className="sm:text-3xl md:text-6xl mb-4">Archit Mehta</h1>
       <div className="flex space-x-10">
         <a target="_blank" href="https://www.instagram.com/archit_mehta/?hl=en">
           <FontAwesomeIcon icon={faInstagram} size="3x" className="flex-1" />

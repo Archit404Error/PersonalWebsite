@@ -10,35 +10,35 @@ export const NavHeader = () => {
   return (
     <Navbar className="bg-black opacity-95">
       <NavbarBrand>
-        <p className="font-bold text-inherit text-2xl">Archit Mehta</p>
+        <p className="font-bold text-inherit text-xl">Archit Mehta</p>
       </NavbarBrand>
       <NavbarContent className="hidden sm:flex gap-4" justify="end">
         <NavbarItem>
-          <Link className="text-white text-xl" href="#home">
+          <Link className="text-white text-lg" href="#home">
             Home
           </Link>
         </NavbarItem>
         <NavbarItem>|</NavbarItem>
         <NavbarItem>
-          <Link className="text-white text-xl" href="#projects">
+          <Link className="text-white text-lg" href="#projects">
             Projects
           </Link>
         </NavbarItem>
         <NavbarItem>|</NavbarItem>
         <NavbarItem>
-          <Link className="text-white text-xl" href="#skills">
+          <Link className="text-white text-lg" href="#skills">
             Skills
           </Link>
         </NavbarItem>
         <NavbarItem>|</NavbarItem>
         <NavbarItem>
-          <Link className="text-white text-xl" href="#contact">
+          <Link className="text-white text-lg" href="#contact">
             Contact
           </Link>
         </NavbarItem>
         <NavbarItem>|</NavbarItem>
         <NavbarItem>
-          <Link className="text-white text-xl" href="/Archit_Mehta_Resume.pdf">
+          <Link className="text-white text-lg" href="/Archit_Mehta_Resume.pdf">
             Resume
           </Link>
         </NavbarItem>

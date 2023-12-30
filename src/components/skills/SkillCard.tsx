@@ -30,7 +30,7 @@ export const SkillCard = ({ skillType, skills, delay }: SkillCardProps) => {
       <Card className="bg-[#18181b] text-white">
         <CardHeader className="flex">
           <div className="pl-2 pt-5">
-            <p className="text-2xl font-semibold">{skillType}</p>
+            <p className="text-xl font-semibold">{skillType}</p>
           </div>
         </CardHeader>
         <Divider />
@@ -44,9 +44,9 @@ export const SkillCard = ({ skillType, skills, delay }: SkillCardProps) => {
                 src={skill.imageUrl}
                 width={40}
               />
-              <div className="flex flex-col text-xl">
+              <div className="flex flex-col">
                 <p className="text-md">{skill.name}</p>
-                <p className="text-small text-default-500">{skill.subtitle}</p>
+                <p className="text-sm text-default-500">{skill.subtitle}</p>
               </div>
             </div>
           ))}

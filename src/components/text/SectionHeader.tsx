@@ -21,7 +21,7 @@ export const SectionHeader = ({ subtitle, title }: SectionHeaderProps) => {
           subtitleVisible ? "translate-y-0" : "translate-y-20"
         }`}
       >
-        <h1 className="text-3xl bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text">
+        <h1 className="text-2xl bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text">
           {subtitle}
         </h1>
       </div>

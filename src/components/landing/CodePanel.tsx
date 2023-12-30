@@ -35,7 +35,7 @@ const CodeBlock = ({ text, color, setDoneRendering }: CodeBlockProps) => {
 
   return (
     <p
-      className={`font-mono text-${color} whitespace-pre text-4xl ${
+      className={`font-mono text-${color} whitespace-pre text-3xl ${
         renderedIdx < text.length ? "after:content-['|']" : ""
       }`}
     >

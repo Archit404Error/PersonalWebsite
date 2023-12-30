@@ -31,7 +31,7 @@ const config: Config = {
         gray: "#8492a6",
       },
       fontSize: {
-        section: "5.5rem",
+        section: "4.5rem",
       },
       transitionDelay: {
         "0": "0ms",
