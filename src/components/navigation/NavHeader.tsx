@@ -26,8 +26,8 @@ export const NavHeader = () => {
         </NavbarItem>
         <NavbarItem>|</NavbarItem>
         <NavbarItem>
-          <Link className="text-white text-lg" href="#skills">
-            Skills
+          <Link className="text-white text-lg" href="#work-experience">
+            Experience
           </Link>
         </NavbarItem>
         <NavbarItem>|</NavbarItem>

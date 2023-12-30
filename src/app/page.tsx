@@ -1,4 +1,5 @@
 import { Contact } from "@/components/contact/Contact";
+import { WorkExperience } from "@/components/experience/WorkExperience";
 import { Introduction } from "@/components/intro/Introduction";
 import { CodePanel } from "@/components/landing/CodePanel";
 import { IntroCard } from "@/components/landing/IntroCard";
@@ -23,6 +24,7 @@ export default function Home() {
         <Introduction />
         <Projects />
         <Skills />
+        <WorkExperience />
         <Contact />
       </div>
     </main>
