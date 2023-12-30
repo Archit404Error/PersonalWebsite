@@ -21,7 +21,7 @@ export const SectionHeader = ({ subtitle, title }: SectionHeaderProps) => {
           subtitleVisible ? "translate-y-0" : "translate-y-20"
         }`}
       >
-        <h1 className="text-sm md:text-2xl bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text">
+        <h1 className="text-base md:text-2xl bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text">
           {subtitle}
         </h1>
       </div>
@@ -31,7 +31,9 @@ export const SectionHeader = ({ subtitle, title }: SectionHeaderProps) => {
           titleVisible ? "translate-y-0" : "translate-y-[-80px]"
         }`}
       >
-        <h1 className="text-4xl md:text-section">{title}</h1>
+        <h1 className="text-4xl md:text-section md:leading-[6.75rem]">
+          {title}
+        </h1>
       </div>
     </>
   );

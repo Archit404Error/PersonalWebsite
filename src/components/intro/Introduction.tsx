@@ -6,9 +6,11 @@ import { Computer } from "../threejs/Computer";
 export const Introduction = () => {
   return (
     <div className="grid grid-cols-12 pt-20 pl-20 bg-gradient-to-br from-[#011f3d] via-[#1d4975] to-[#366a9e] z-10 w-full">
-      <div className="col-start-3 col-span-8 flex gap-8 flex-col">
+      <div className="col-span-12 lg:col-start-3 lg:col-span-8 flex gap-8 flex-col">
         <RevealWrapper delay={0} origin="left">
-          <h1 className="text-7xl font-medium">Hi, I&apos;m Archit!</h1>
+          <h1 className="text-5xl md:text-7xl font-medium">
+            Hi, I&apos;m Archit!
+          </h1>
         </RevealWrapper>
         <RevealWrapper delay={200}>
           <p className="text-2xl">
