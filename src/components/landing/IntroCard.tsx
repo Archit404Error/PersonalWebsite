@@ -1,8 +1,5 @@
-import {
-  faGithub,
-  faInstagram,
-  faLinkedin,
-} from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelopeSquare } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 
@@ -20,9 +17,9 @@ export const IntroCard = () => {
         Archit Mehta
       </h1>
       <div className="flex space-x-10">
-        <a target="_blank" href="https://www.instagram.com/archit_mehta/?hl=en">
+        <a href="mailto:4architmehta@gmail.com">
           <FontAwesomeIcon
-            icon={faInstagram}
+            icon={faEnvelopeSquare}
             className="flex-1 text-4xl sm:text-5xl"
           />
         </a>

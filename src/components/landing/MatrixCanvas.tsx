@@ -6,7 +6,6 @@ export const MatrixCanvas = () => {
   const canvasRef = useRef<any>();
   const dropArrs: number[][] = [[10, 0]];
   const maxCols = 75;
-  const fontSize = screen.width >= 1000 ? 32 : 16;
 
   const randInt = (min: number, max: number) => {
     return Math.floor(Math.random() * (max - min)) + min;
@@ -28,6 +27,8 @@ export const MatrixCanvas = () => {
       const newCol = randInt(0, canvWidth);
       dropArrs.push([newCol, 0]);
     }
+
+    const fontSize = screen.width >= 1000 ? 32 : 16;
 
     for (const dropArr of dropArrs) {
       ctx.font = `${fontSize}px san-serif`;

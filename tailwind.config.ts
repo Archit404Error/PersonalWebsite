@@ -11,6 +11,8 @@ const config: Config = {
   safelist: [
     "text-gray",
     "text-white",
+    "bg-red-500",
+    "bg-green-500",
     "text-blue-500",
     "delay-0",
     "delay-200",

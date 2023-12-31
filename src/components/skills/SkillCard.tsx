@@ -29,7 +29,7 @@ export const SkillCard = ({ skillType, skills, delay }: SkillCardProps) => {
     >
       <Card className="bg-[#18181b] text-white">
         <CardHeader className="flex">
-          <div className="pl-2 pt-5">
+          <div className="pl-2 pt-2">
             <p className="text-xl font-semibold">{skillType}</p>
           </div>
         </CardHeader>
