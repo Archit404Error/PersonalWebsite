@@ -24,9 +24,16 @@ export const ExperienceCard = ({
         alt={`Archit Mehta: ${title} ${organization}`}
         width={300}
         height={300}
-        className="col-span-12 w-[50%] mb-5 md:mb-0 md:col-span-4 md:w-full rounded-xl"
+        className="hidden mb-0 rounded-xl col-span-3 md:block xl:col-span-4"
       />
-      <div className="col-span-12 lg:col-start-6 lg:col-span-6 macpro:col-span-8">
+      <Image
+        src={image}
+        alt={`Archit Mehta: ${title} ${organization}`}
+        width={300}
+        height={300}
+        className="col-span-12 mb-5 rounded-xl w-[50%] md:hidden"
+      />
+      <div className="col-span-12 md:col-start-6 lg:col-start-5 lg:col-span-6 macpro:col-span-8">
         <p className="text-3xl font-semibold">{title}</p>
         <p className="text-xl font-thin mb-2">
           {organization} ({startDate} - {endDate})
