@@ -39,30 +39,23 @@ export const NavHeader = () => {
             </DropdownTrigger>
           </NavbarItem>
           <DropdownMenu>
-            <DropdownItem>
-              <Link className="text-white" href="#home">
-                Home
-              </Link>
+            <DropdownItem className="text-white" href="#home">
+              Home
             </DropdownItem>
-            <DropdownItem>
-              <Link className="text-white" href="#projects">
-                Projects
-              </Link>
+            <DropdownItem className="text-white" href="#projects">
+              Projects
             </DropdownItem>
-            <DropdownItem>
-              <Link className="text-white" href="#work-experience">
-                Experience
-              </Link>
+            <DropdownItem className="text-white" href="#work-experience">
+              Experience
             </DropdownItem>
-            <DropdownItem>
-              <Link className="text-white" href="#contact">
-                Contact
-              </Link>
+            <DropdownItem className="text-white" href="#contact">
+              Contact
             </DropdownItem>
-            <DropdownItem>
-              <Link className="text-white" href="/Archit_Mehta_Resume.pdf">
-                Resume
-              </Link>
+            <DropdownItem
+              className="text-white"
+              href="/Archit_Mehta_Resume.pdf"
+            >
+              Resume
             </DropdownItem>
           </DropdownMenu>
         </Dropdown>
