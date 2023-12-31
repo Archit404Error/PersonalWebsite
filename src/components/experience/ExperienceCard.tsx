@@ -18,13 +18,13 @@ export const ExperienceCard = ({
   endDate,
 }: ExperienceCardProps) => {
   return (
-    <div className="grid grid-cols-12 mb-5">
+    <div className="grid grid-cols-12 mb-10 md:mb-5">
       <Image
         src={image}
         alt={`Archit Mehta: ${title} ${organization}`}
         width={300}
         height={300}
-        className="col-span-4 rounded-xl"
+        className="col-span-12 w-[50%] mb-5 md:mb-0 md:col-span-4 md:w-full rounded-xl"
       />
       <div className="col-span-12 lg:col-start-6 lg:col-span-6 macpro:col-span-8">
         <p className="text-3xl font-semibold">{title}</p>

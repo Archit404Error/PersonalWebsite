@@ -80,7 +80,7 @@ const CodeRenderer = ({ codeBlocks }: CodeRendererProps) => {
 
 export const CodePanel = () => {
   return (
-    <div className="border-2 border-gray-700 bg-black p-4 rounded-xl w-full min-h-[60%] m-auto invisible md:visible">
+    <div className="border-2 border-gray-700 bg-black p-4 rounded-xl w-full min-h-[60%] m-auto hidden md:block">
       {<CodeRenderer codeBlocks={code} />}
     </div>
   );

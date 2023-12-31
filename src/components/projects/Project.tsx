@@ -40,7 +40,7 @@ export const Project = ({
               />
             </div>
             <div className="col-start-3 col-span-9 md:col-start-2 md:col-span-10 xl:col-span-5">
-              <h1 className="text-4xl md:text-5xl mb-4">{title}</h1>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl mb-4">{title}</h1>
               <div className="flex flex-row gap-5">
                 {url && (
                   <RoundButton

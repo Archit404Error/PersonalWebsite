@@ -16,7 +16,10 @@ export const WorkExperience = () => {
         </div>
         <div className="col-start-2 col-span-7 macpro:col-start-2 macpro:col-span-6">
           {experienceData.map((experience) => (
-            <ExperienceCard key={experience.title} {...experience} />
+            <ExperienceCard
+              key={experience.title + experience.organization}
+              {...experience}
+            />
           ))}
         </div>
       </div>
