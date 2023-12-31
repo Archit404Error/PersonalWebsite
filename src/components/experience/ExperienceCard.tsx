@@ -1,4 +1,6 @@
+import { useIsVisibleOnce } from "@/hooks/useIsVisibleOnce";
 import Image from "next/image";
+import { useRef } from "react";
 
 export interface ExperienceCardProps {
   title: string;
@@ -7,6 +9,7 @@ export interface ExperienceCardProps {
   image: string;
   startDate: string;
   endDate: string;
+  delay?: number;
 }
 
 export const ExperienceCard = ({
@@ -16,9 +19,18 @@ export const ExperienceCard = ({
   image,
   startDate,
   endDate,
+  delay,
 }: ExperienceCardProps) => {
+  const experienceRef = useRef(null);
+  const isVisible = useIsVisibleOnce(experienceRef);
+
   return (
-    <div className="grid grid-cols-12 mb-10 md:mb-5">
+    <div
+      ref={experienceRef}
+      className={`grid grid-cols-12 mb-10 md:mb-5 ease-in transition-all ${
+        isVisible ? "translate-x-0 opacity-100" : "translate-x-60 opacity-0"
+      } delay-${delay ?? 0}`}
+    >
       <Image
         src={image}
         alt={`Archit Mehta: ${title} ${organization}`}

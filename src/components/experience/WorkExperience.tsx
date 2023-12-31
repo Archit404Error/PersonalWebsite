@@ -15,10 +15,11 @@ export const WorkExperience = () => {
           />
         </div>
         <div className="col-start-2 col-span-7 macpro:col-start-2 macpro:col-span-6">
-          {experienceData.map((experience) => (
+          {experienceData.map((experience, i) => (
             <ExperienceCard
               key={experience.title + experience.organization}
               {...experience}
+              delay={i * 200}
             />
           ))}
         </div>
