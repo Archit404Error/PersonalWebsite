@@ -1,4 +1,4 @@
-import { NextResponse } from "next/server";
+import { NextRequest } from "next/server";
 import nodemailer from "nodemailer";
 
 interface EmailRequest {
@@ -7,7 +7,7 @@ interface EmailRequest {
   description: string;
 }
 
-export const POST = async (req: NextResponse<EmailRequest>) => {
+export const POST = async (req: NextRequest) => {
   const body: EmailRequest = await req.json();
   const mailTransporter = nodemailer.createTransport({
     service: "gmail",
