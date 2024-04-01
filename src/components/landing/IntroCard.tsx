@@ -10,7 +10,7 @@ export const IntroCard = () => {
         alt="Archit Mehta, programmer, entrepreneur, and student."
         width="350"
         height="350"
-        src={"/Archit_Headshot.jpg"}
+        src={"/Archit_Headshot.jpeg"}
         className="rounded-xl mb-4"
       />
       <h1 className="text-[2rem] font-bold md:font-normal sm:text-5xl md:text-6xl mb-4">

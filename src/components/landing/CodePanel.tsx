@@ -1,20 +1,39 @@
 "use client";
 
-import { code, CodeBlock } from "@/code";
+import { code, CodeLine, CodeStruct } from "@/code";
 import { useEffect, useState } from "react";
 
 interface CodeBlockProps {
-  text: string;
-  color: string;
+  codeStructs: CodeStruct[];
   setDoneRendering: any;
 }
 
-const CodeBlock = ({ text, color, setDoneRendering }: CodeBlockProps) => {
+const getRenderedTexts = (renderedIdx: number, codeStructs: CodeStruct[]) => {
+  let renderedTexts = [];
+  let i = 0;
+  let remainingChars = renderedIdx;
+  while (remainingChars > 0) {
+    const structText = codeStructs[i].text;
+    renderedTexts.push(
+      structText.substring(0, Math.min(structText.length, remainingChars))
+    );
+
+    i++;
+    remainingChars -= structText.length;
+  }
+
+  return renderedTexts;
+};
+
+const CodeBlock = ({ codeStructs, setDoneRendering }: CodeBlockProps) => {
   const [renderedIdx, setRenderedIdx] = useState(0);
   const [renderIntervalId, setRenderIntervalId] = useState<NodeJS.Timeout>();
+  const totalTextLength = codeStructs
+    .map((code) => code.text.length)
+    .reduce((acc, cur) => acc + cur);
 
   const renderNextChar = () => {
-    if (renderedIdx < text.length) {
+    if (renderedIdx < totalTextLength) {
       setRenderedIdx((renderedIdx) => renderedIdx + 1);
     }
   };
@@ -27,25 +46,34 @@ const CodeBlock = ({ text, color, setDoneRendering }: CodeBlockProps) => {
   }, []);
 
   useEffect(() => {
-    if (renderedIdx >= text.length) {
+    if (renderedIdx >= totalTextLength) {
       clearInterval(renderIntervalId);
       setDoneRendering(true);
     }
   }, [renderedIdx]);
 
+  const renderedTexts = getRenderedTexts(renderedIdx, codeStructs);
+  const isFinalChar = renderedIdx >= totalTextLength;
+
   return (
-    <p
-      className={`font-mono text-${color} whitespace-pre text-sm md:text-lg lg:text-2xl macpro:text-3xl ${
-        renderedIdx < text.length ? "after:content-['|']" : ""
-      }`}
-    >
-      {text.substring(0, renderedIdx)}
+    <p>
+      {renderedTexts.map((renderedText, index) => {
+        const showCursor = index == renderedTexts.length - 1 && !isFinalChar;
+        const cursorStyle = showCursor ? "after:content-['|']" : "";
+        const codeStyle = `font-mono text-${codeStructs[index].color} whitespace-pre text-sm md:text-lg lg:text-2xl macpro:text-3xl ${cursorStyle}`;
+
+        return (
+          <span key={renderedText} className={codeStyle}>
+            {renderedText}
+          </span>
+        );
+      })}
     </p>
   );
 };
 
 interface CodeRendererProps {
-  codeBlocks: CodeBlock[];
+  codeBlocks: CodeLine[];
 }
 
 const CodeRenderer = ({ codeBlocks }: CodeRendererProps) => {
