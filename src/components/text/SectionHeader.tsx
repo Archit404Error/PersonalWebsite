@@ -28,7 +28,7 @@ export const SectionHeader = ({ subtitle, title }: SectionHeaderProps) => {
       <div
         ref={titleRef}
         className={`transition-transform ease-in duration-1000 ${
-          titleVisible ? "translate-y-0" : "translate-y-[-80px]"
+          titleVisible ? "translate-y-0" : "translate-y-[-60px]"
         }`}
       >
         <h1 className="text-4xl md:text-section md:leading-[6.75rem]">

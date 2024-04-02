@@ -17,17 +17,17 @@ const parallaxData: ParallaxBubbleProps[] = [
   },
   {
     imagePath: "/orgs/cornell.png",
-    parallaxAmount: -50,
+    parallaxAmount: 150,
     radius: 125,
     leftOffset: 50,
-    topOffset: 400,
+    topOffset: 200,
   },
   {
     imagePath: "/orgs/appdev.jpg",
-    parallaxAmount: -100,
+    parallaxAmount: 100,
     radius: 90,
     leftOffset: 200,
-    topOffset: 100,
+    topOffset: 10,
   },
 ];
 
