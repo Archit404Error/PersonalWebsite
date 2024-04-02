@@ -2,19 +2,11 @@
 
 import { faAppStore, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
+import { Card, CardBody } from "@nextui-org/react";
 import { RevealWrapper } from "next-reveal";
 import Image from "next/image";
+import { ProjectData } from "./Projects";
 import { RoundButton } from "./RoundButton";
-
-interface ProjectProps {
-  title: string;
-  description: string;
-  image: string;
-  url?: string;
-  appStore?: string;
-  github?: string;
-  impact?: string;
-}
 
 export const Project = ({
   title,
@@ -24,23 +16,26 @@ export const Project = ({
   appStore,
   github,
   impact,
-}: ProjectProps) => {
+  tech,
+}: ProjectData) => {
   return (
     <RevealWrapper>
-      <div className="md:pr-10 md:pl-10">
-        <div className="bg-gradient-to-br from-[#011f3d] via-[#1d4975] to-[#366a9e] pt-10 pb-10 rounded-xl">
-          <div className="pl-3 md:pl-0 md:grid md:grid-cols-12 gap-20">
-            <div className="col-span-12 xl:col-start-2 xl:col-span-5 flex items-center justify-center">
-              <Image
-                alt={description}
-                src={image}
-                width={500}
-                height={500}
-                className="md:w-[50%] md:h-full xl:w-full xl:h-full"
-              />
-            </div>
-            <div className="col-start-3 col-span-9 md:col-start-2 md:col-span-10 xl:col-span-5">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl mb-4">{title}</h1>
+      <div className="pl-3 md:pl-0 md:grid md:grid-cols-12 gap-10">
+        <div className="col-span-12 xl:col-start-2 xl:col-span-5 flex items-center justify-center">
+          <Image
+            alt={description}
+            src={image}
+            width={500}
+            height={500}
+            className="md:w-[50%] md:h-full xl:w-full xl:h-full"
+          />
+        </div>
+        <div className="col-start-3 col-span-9 md:col-start-2 md:col-span-10 xl:col-span-5">
+          <Card className="p-5 bg-[#18181b]">
+            <CardBody>
+              <h1 className="text-2xl sm:text-3xl md:text-4xl 2xl:text-5xl mb-4 font-bold">
+                {title}
+              </h1>
               <div className="flex flex-row gap-5">
                 {url && (
                   <RoundButton
@@ -66,12 +61,17 @@ export const Project = ({
               </div>
               <p className="text-xl md:text-2xl mt-4">{description}</p>
               {impact && (
-                <p className="text-xl md:text-2xl mt-5 font-semibold">
-                  Impact: {impact}
+                <p className="text-xl md:text-xl mt-5">
+                  <span className="font-semibold">Impact:</span> {impact}
                 </p>
               )}
-            </div>
-          </div>
+              {tech && (
+                <p className="text-xl md:text-xl mt-5">
+                  <span className="font-semibold">Tech:</span> {tech}
+                </p>
+              )}
+            </CardBody>
+          </Card>
         </div>
       </div>
     </RevealWrapper>

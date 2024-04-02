@@ -12,7 +12,7 @@ export const RoundButton = ({ faIcon, buttonText, url }: RoundButtonProps) => {
     <a href={url} target="_blank">
       <button className="flex flex-row bg-white text-black rounded-lg items-center gap-3 p-2">
         <FontAwesomeIcon icon={faIcon} className="text-lg" />
-        <p className="text-lg">{buttonText}</p>
+        <p className="text-md 2xl:text-lg">{buttonText}</p>
       </button>
     </a>
   );

@@ -31,7 +31,7 @@ export const SectionHeader = ({ subtitle, title }: SectionHeaderProps) => {
           titleVisible ? "translate-y-0" : "translate-y-[-60px]"
         }`}
       >
-        <h1 className="text-4xl md:text-section md:leading-[6.75rem]">
+        <h1 className="text-4xl md:text-section md:leading-[6.75rem] font-medium">
           {title}
         </h1>
       </div>

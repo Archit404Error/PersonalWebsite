@@ -27,7 +27,7 @@ const parallaxData: ParallaxBubbleProps[] = [
     parallaxAmount: 100,
     radius: 90,
     leftOffset: 200,
-    topOffset: 10,
+    topOffset: 20,
   },
 ];
 
