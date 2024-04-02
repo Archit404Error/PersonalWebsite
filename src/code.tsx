@@ -9,7 +9,7 @@ export interface CodeLine {
 
 export const code: CodeLine[] = [
   {
-    codeStructs: [{ text: "\n// About Me!\n", color: "gray" }],
+    codeStructs: [{ text: "// About Me!\n", color: "gray" }],
   },
   {
     codeStructs: [

@@ -1,6 +1,7 @@
 "use client";
 
 import { code, CodeLine, CodeStruct } from "@/code";
+import { Card, CardBody, CardHeader, Divider } from "@nextui-org/react";
 import { useEffect, useState } from "react";
 
 interface CodeBlockProps {
@@ -108,8 +109,19 @@ const CodeRenderer = ({ codeBlocks }: CodeRendererProps) => {
 
 export const CodePanel = () => {
   return (
-    <div className="border-2 border-gray-700 bg-black p-4 rounded-xl w-full min-h-[60%] m-auto hidden md:block">
-      {<CodeRenderer codeBlocks={code} />}
-    </div>
+    <Card
+      isBlurred
+      className="bg-black rounded-xl w-full min-h-[60%] m-auto hidden md:block"
+      shadow="md"
+    >
+      <CardHeader className="bg-default-100 p-1.5 justify-center">
+        <div className="bg-red-600 rounded-full h-3 w-3 absolute left-3" />
+        <div className="bg-yellow-600 rounded-full h-3 w-3 absolute left-9" />
+        <div className="bg-green-600 rounded-full h-3 w-3 absolute left-[60px]" />
+        <p className="font-semibold">Introduction to Archit</p>
+      </CardHeader>
+      <Divider />
+      <CardBody>{<CodeRenderer codeBlocks={code} />}</CardBody>
+    </Card>
   );
 };

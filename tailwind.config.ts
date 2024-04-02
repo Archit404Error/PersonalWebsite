@@ -22,6 +22,8 @@ const config: Config = {
     "delay-800",
     "delay-1000",
     "delay-1200",
+    ...[...Array(100).keys()].map((i) => `top-[${i * 10}px]`),
+    ...[...Array(100).keys()].map((i) => `left-[${i * 10}px]`),
   ],
   theme: {
     extend: {
