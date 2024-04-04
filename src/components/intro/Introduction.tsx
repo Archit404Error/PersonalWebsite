@@ -9,20 +9,23 @@ export const Introduction = () => {
     <div className="grid grid-cols-12 pt-20 pb-20 pl-3 sm:pl-10 md:pl-20 bg-gradient-to-br from-[#011f3d] via-[#1d4975] to-[#366a9e] z-10 w-full">
       <div className="col-span-12 lg:col-start-2 lg:col-span-7 flex gap-8 flex-col">
         <RevealWrapper delay={0} origin="left">
-          <h1 className="text-5xl md:text-7xl font-medium">
+          <h1 className="text-5xl md:text-7xl 2xl:text-8xl font-medium">
             Hi, I&apos;m Archit!
           </h1>
         </RevealWrapper>
         <RevealWrapper delay={200}>
-          <p className="text-2xl">
-            I&apos;m an avid programmer and entrepreneur currently studing
+          <p className="text-2xl 2xl:text-3xl 3xl:text-4xl">
+            I&apos;m an avid programmer and entrepreneur currently studying
             Computer Science and Applied Mathematics at Cornell University.
           </p>
         </RevealWrapper>
         <RevealWrapper delay={400}>
-          <p className="text-2xl">
+          <p className="text-2xl 2xl:text-3xl 3xl:text-4xl">
             I&apos;ve built dozens of{" "}
-            <Link href="#projects" className="text-2xl text-[#63a7f2]">
+            <Link
+              href="#projects"
+              className="text-2xl 2xl:text-3xl 3xl:text-4xl text-[#63a7f2]"
+            >
               projects
             </Link>{" "}
             with tens of thousands of users, and as an avid entrepreneur
@@ -31,12 +34,12 @@ export const Introduction = () => {
           </p>
         </RevealWrapper>
         <RevealWrapper delay={600}>
-          <p className="text-2xl">
+          <p className="text-2xl 2xl:text-3xl 3xl:text-4xl">
             On campus, I&apos;m President of{" "}
             <Link
               href="https://cornellappdev.com"
               target="_blank"
-              className="text-2xl text-[#63a7f2]"
+              className="text-2xl 2xl:text-3xl 3xl:text-4xl text-[#63a7f2]"
             >
               Cornell AppDev
             </Link>
@@ -47,13 +50,13 @@ export const Introduction = () => {
           </p>
         </RevealWrapper>
         <RevealWrapper delay={800}>
-          <p className="text-2xl">
+          <p className="text-2xl 2xl:text-3xl 3xl:text-4xl">
             I&apos;ve also grown as an engineer through industry experience.
             Most recently, I worked on HDMaps at{" "}
             <Link
-              href="https://apple.com/maps/"
+              href="https://www.apple.com/maps/"
               target="_blank"
-              className="text-2xl text-[#63a7f2]"
+              className="text-2xl 2xl:text-3xl 3xl:text-4xl text-[#63a7f2]"
             >
               Apple
             </Link>
@@ -62,7 +65,7 @@ export const Introduction = () => {
             <Link
               href="https://stripe.com"
               target="_blank"
-              className="text-2xl text-[#63a7f2]"
+              className="text-2xl 2xl:text-3xl 3xl:text-4xl text-[#63a7f2]"
             >
               Stripe
             </Link>

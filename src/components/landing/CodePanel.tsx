@@ -61,7 +61,7 @@ const CodeBlock = ({ codeStructs, setDoneRendering }: CodeBlockProps) => {
       {renderedTexts.map((renderedText, index) => {
         const showCursor = index == renderedTexts.length - 1 && !isFinalChar;
         const cursorStyle = showCursor ? "after:content-['|']" : "";
-        const codeStyle = `font-mono text-${codeStructs[index].color} whitespace-pre text-sm md:text-lg lg:text-2xl macpro:text-3xl ${cursorStyle}`;
+        const codeStyle = `font-mono text-${codeStructs[index].color} whitespace-pre text-sm md:text-lg lg:text-2xl macpro:text-3xl 2xl:text-[34px] 3xl:text-5xl ${cursorStyle}`;
 
         return (
           <span key={renderedText} className={codeStyle}>

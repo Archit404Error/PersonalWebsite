@@ -48,7 +48,7 @@ export const ParallaxBubble = ({
         content={description.split("\n").map((desc) => (
           <p key={desc}>{desc}</p>
         ))}
-        className="bg-[#18181b] p-5"
+        className="bg-[#18181b] p-5 text-white"
       >
         <Image
           src={imagePath}
