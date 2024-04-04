@@ -61,7 +61,8 @@ const CodeBlock = ({ codeStructs, setDoneRendering }: CodeBlockProps) => {
       {renderedTexts.map((renderedText, index) => {
         const showCursor = index == renderedTexts.length - 1 && !isFinalChar;
         const cursorStyle = showCursor ? "after:content-['|']" : "";
-        const codeStyle = `font-mono text-${codeStructs[index].color} whitespace-pre text-sm md:text-lg lg:text-2xl macpro:text-3xl 2xl:text-[34px] 3xl:text-5xl ${cursorStyle}`;
+        const codeStyle = `font-mono text-${codeStructs[index].color} whitespace-pre align-middle
+          text-sm md:text-lg lg:text-2xl macpro:text-3xl 2xl:text-[34px] 2xl:leading-[38px] 3xl:text-5xl ${cursorStyle}`;
 
         return (
           <span key={renderedText} className={codeStyle}>
@@ -111,7 +112,7 @@ export const CodePanel = () => {
   return (
     <Card
       isBlurred
-      className="bg-black rounded-xl w-full min-h-[60%] m-auto hidden md:block"
+      className="bg-black rounded-xl w-full min-h-[425px] 3xl:min-[60%] m-auto hidden md:block"
       shadow="md"
     >
       <CardHeader className="bg-default-100 p-1.5 justify-center">
