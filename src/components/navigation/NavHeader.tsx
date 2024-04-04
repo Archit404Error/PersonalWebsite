@@ -17,7 +17,7 @@ import {
 
 export const NavHeader = () => {
   return (
-    <Navbar className="bg-black opacity-95">
+    <Navbar className="bg-black opacity-95 fixed">
       <NavbarBrand>
         <p className="font-bold text-inherit text-xl">Archit Mehta</p>
       </NavbarBrand>
