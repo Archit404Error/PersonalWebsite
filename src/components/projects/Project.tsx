@@ -20,7 +20,7 @@ export const Project = ({
 }: ProjectData) => {
   return (
     <RevealWrapper>
-      <div className="pl-3 md:pl-0 md:grid md:grid-cols-12 gap-10">
+      <div className="pl-3 pr-3 md:pl-0 md:pr-0 md:grid md:grid-cols-12 gap-10">
         <div className="col-span-12 xl:col-start-2 xl:col-span-5 flex items-center justify-center">
           <Image
             alt={description}

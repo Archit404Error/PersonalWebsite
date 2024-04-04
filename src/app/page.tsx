@@ -13,7 +13,7 @@ config.autoAddCss = false;
 
 export default function Home() {
   return (
-    <main className="dark text-white flex flex-col items-center justify-center bg-black">
+    <main className="dark text-white flex flex-col items-center justify-center bg-black overflow-hidden">
       <NavHeader />
       <MatrixCanvas />
       <div className="z-10 w-full">
