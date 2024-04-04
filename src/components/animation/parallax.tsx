@@ -1,5 +1,6 @@
 "use client";
 
+import { Tooltip } from "@nextui-org/react";
 import { motion, MotionValue, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import { ReactNode, useRef } from "react";
@@ -30,6 +31,7 @@ export interface ParallaxBubbleProps {
   radius: number;
   leftOffset: number;
   topOffset: number;
+  description: string;
 }
 
 export const ParallaxBubble = ({
@@ -38,16 +40,24 @@ export const ParallaxBubble = ({
   radius,
   leftOffset,
   topOffset,
+  description,
 }: ParallaxBubbleProps) => {
   return (
     <Parallax parallaxAmount={parallaxAmount}>
-      <Image
-        src={imagePath}
-        alt=""
-        width={radius}
-        height={radius}
-        className={`absolute rounded-full left-[${leftOffset}px] top-[${topOffset}px]`}
-      />
+      <Tooltip
+        content={description.split("\n").map((desc) => (
+          <p key={desc}>{desc}</p>
+        ))}
+        className="bg-[#18181b] p-5"
+      >
+        <Image
+          src={imagePath}
+          alt=""
+          width={radius}
+          height={radius}
+          className={`absolute rounded-full left-[${leftOffset}px] top-[${topOffset}px]`}
+        />
+      </Tooltip>
     </Parallax>
   );
 };

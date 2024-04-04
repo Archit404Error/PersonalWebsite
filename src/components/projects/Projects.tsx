@@ -37,7 +37,7 @@ const projectData: ProjectData[] = [
   {
     title: "Newsflash: AI News",
     description:
-      "NewsFlash is a website and mobile app that helps identify and remove news bias. It displays top headlines(and their bias) as well as  an analysis of multiple articles across the web on a given topic.",
+      "NewsFlash is a website and mobile app that utilizes Machine Learning to identify news bias. It displays top headlines (and their bias), and is capable of analyzing the sentiments and bias of any article on the web.",
     image: "/projects/newsflash_mac.png",
     url: "http://3.84.0.201:8000/",
     appStore:
@@ -48,7 +48,7 @@ const projectData: ProjectData[] = [
   {
     title: "PriceMerge",
     description:
-      "PriceMerge empowers users to combat price hiking by comparing product prices across thousands of websites and automatically showing the cheapest price.",
+      "PriceMerge empowers users to combat price hiking by allowing users to compare and track product prices across thousands of websites, automatically notifying them when prices drop. PriceMerge aided tens of thousands of users in acquiring PPE during the COVID-19 pandemic and has been featured on the national news.",
     image: "/projects/pricemerge_mac.png",
     github: "https://github.com/Archit404Error/PriceMerge",
     impact: "25,000+ Users; 200,000+ Searches; Featured on national news",

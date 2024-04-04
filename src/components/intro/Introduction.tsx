@@ -1,5 +1,6 @@
 "use client";
 
+import { Link } from "@nextui-org/react";
 import { RevealWrapper } from "next-reveal";
 import { ParallaxOrgs } from "./ParallaxOrgs";
 
@@ -15,29 +16,57 @@ export const Introduction = () => {
         <RevealWrapper delay={200}>
           <p className="text-2xl">
             I&apos;m an avid programmer and entrepreneur currently studing
-            Computer Science at Cornell univerity.
+            Computer Science and Applied Mathematics at Cornell University.
           </p>
         </RevealWrapper>
         <RevealWrapper delay={400}>
           <p className="text-2xl">
-            I&apos;ve built dozens of projects with tens of thousands of users,
-            and as an avid entrepreneur I&apos;m always tinkering and building
-            new ideas with the potential to revolutionize the world around me.
+            I&apos;ve built dozens of{" "}
+            <Link href="#projects" className="text-2xl text-[#63a7f2]">
+              projects
+            </Link>{" "}
+            with tens of thousands of users, and as an avid entrepreneur
+            I&apos;m always tinkering and building new ideas with the potential
+            to revolutionize the world.
           </p>
         </RevealWrapper>
         <RevealWrapper delay={600}>
           <p className="text-2xl">
-            On campus I&apos;m President of Cornell AppDev, a team of 50
-            students building apps with over 20,000 combined active users,
-            helping Cornellians with everything ranging from Dining Hall Menus
-            to Transit.
+            On campus, I&apos;m President of{" "}
+            <Link
+              href="https://cornellappdev.com"
+              target="_blank"
+              className="text-2xl text-[#63a7f2]"
+            >
+              Cornell AppDev
+            </Link>
+            , a team of 50 students building apps with over 15,000 combined
+            active users. Our apps solve Cornellians&apos; daily headaches,
+            aiding students in everything from browsing dining hall menus to
+            campus transit.
           </p>
         </RevealWrapper>
         <RevealWrapper delay={800}>
           <p className="text-2xl">
             I&apos;ve also grown as an engineer through industry experience.
-            Most recently, I worked on HDMaps at Apple, helping deliver maps for
-            autonomous systems.
+            Most recently, I worked on HDMaps at{" "}
+            <Link
+              href="https://apple.com/maps/"
+              target="_blank"
+              className="text-2xl text-[#63a7f2]"
+            >
+              Apple
+            </Link>
+            , helping deliver maps for autonomous systems. After graduating,
+            I&apos;ll be working as a Software Engineer at{" "}
+            <Link
+              href="https://stripe.com"
+              target="_blank"
+              className="text-2xl text-[#63a7f2]"
+            >
+              Stripe
+            </Link>
+            !
           </p>
         </RevealWrapper>
       </div>
