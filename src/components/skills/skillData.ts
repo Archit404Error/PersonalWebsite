@@ -41,12 +41,12 @@ export const skills: SkillCardProps[] = [
       },
       {
         name: "Flask",
-        subtitle: "Python Backend Framework",
+        subtitle: "Backend Framework",
         imageUrl: "/logos/flask.png",
       },
       {
         name: "Django",
-        subtitle: "Python Backend Framework",
+        subtitle: "Backend Framework",
         imageUrl: "/logos/django.svg",
       },
     ],
