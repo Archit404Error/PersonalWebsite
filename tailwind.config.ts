@@ -49,6 +49,7 @@ const config: Config = {
       },
       screens: {
         macpro: "1512px",
+        "3xl": "1800px",
       },
     },
   },
