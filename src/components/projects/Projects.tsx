@@ -46,12 +46,28 @@ const projectData: ProjectData[] = [
     tech: "TensorFlow, NLTK, React Native, Flask, SQL",
   },
   {
+    title: "Volume: Cornell Publications",
+    description:
+      "Volume is a mobile app which aggregates all student publications, magazines, and flyers on Cornell campus. I led a team of 10 developers, designers, and marketers to build the app and grow it to over 400 users.",
+    image: "/projects/volume_phone.png",
+    impact: "400+ users; 20+ publications; 5,000+ articles",
+    tech: "GraphQL, MongoDB, Express & Node.js, TypeScript, RSS Parsing",
+  },
+  {
     title: "PriceMerge",
     description:
       "PriceMerge empowers users to combat price hiking by allowing users to compare and track product prices across thousands of websites, automatically notifying them when prices drop. PriceMerge aided tens of thousands of users in acquiring PPE during the COVID-19 pandemic and has been featured on the national news.",
     image: "/projects/pricemerge_mac.png",
     github: "https://github.com/Archit404Error/PriceMerge",
     impact: "25,000+ Users; 200,000+ Searches; Featured on national news",
+  },
+  {
+    title: "Eatery: Cornell Dining",
+    description:
+      "Eatery is an app built by Cornell AppDev to display Cornell dining hall menus to 10,000+ users daily. I worked as a backend developer on a team of 10 to architect a new backend from scratch to enable account personalization, food recommendations, and item favoriting.",
+    image: "/projects/eatery_phone.png",
+    impact: "10,000 Monthly Users; 30,000+ downloads",
+    tech: "Django, PostGreSQL, SQLAlchemy",
   },
 ];
 

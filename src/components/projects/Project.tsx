@@ -1,10 +1,11 @@
 "use client";
 
+import { useIsVisibleOnce } from "@/hooks/useIsVisibleOnce";
 import { faAppStore, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 import { Card, CardBody } from "@nextui-org/react";
-import { RevealWrapper } from "next-reveal";
 import Image from "next/image";
+import { useRef } from "react";
 import { ProjectData } from "./Projects";
 import { RoundButton } from "./RoundButton";
 
@@ -18,8 +19,16 @@ export const Project = ({
   impact,
   tech,
 }: ProjectData) => {
+  const projectRef = useRef(null);
+  const isVisible = useIsVisibleOnce(projectRef);
+
   return (
-    <RevealWrapper>
+    <div
+      ref={projectRef}
+      className={`ease-in transition-all delay-300 ${
+        isVisible ? "translate-y-0 opacity-100" : "translate-y-20 opacity-0"
+      } `}
+    >
       <div className="pl-3 pr-3 md:pl-0 md:pr-0 md:grid md:grid-cols-12 gap-10">
         <div className="col-span-12 xl:col-start-2 xl:col-span-5 flex items-center justify-center">
           <Image
@@ -74,6 +83,6 @@ export const Project = ({
           </Card>
         </div>
       </div>
-    </RevealWrapper>
+    </div>
   );
 };
