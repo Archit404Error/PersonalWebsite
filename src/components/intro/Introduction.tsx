@@ -6,7 +6,7 @@ import { ParallaxOrgs } from "./ParallaxOrgs";
 
 export const Introduction = () => {
   return (
-    <div className="grid grid-cols-12 pt-20 pb-20 pl-3 sm:pl-10 md:pl-20 bg-gradient-to-br from-[#011f3d] via-[#1d4975] to-[#366a9e] z-10 w-full">
+    <div className="grid grid-cols-12 pt-20 pb-20 pl-3 sm:pl-10 md:pl-20 sm:pr-10 lg:pr-0 bg-gradient-to-br from-[#011f3d] via-[#1d4975] to-[#366a9e] z-10 w-full">
       <div className="col-span-12 lg:col-start-2 lg:col-span-7 flex gap-8 flex-col">
         <RevealWrapper delay={0} origin="left">
           <h1 className="text-5xl md:text-7xl 2xl:text-8xl font-medium">
@@ -73,7 +73,7 @@ export const Introduction = () => {
           </p>
         </RevealWrapper>
       </div>
-      <div className="hidden md:block col-start-9 col-span-3">
+      <div className="hidden lg:block col-start-9 col-span-3">
         <ParallaxOrgs />
       </div>
     </div>
