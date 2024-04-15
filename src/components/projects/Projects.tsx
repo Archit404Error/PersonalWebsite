@@ -20,7 +20,7 @@ const projectData: ProjectData[] = [
     description:
       "This course search engine utilizes Machine Learning and Natural Language Processing to aid students in discovering interesting courses based on a user's natural language queries.",
     image: "/projects/semantic_search_mac.png",
-    url: "https://cornellcourses.org",
+    url: "https://www.youtube.com/watch?v=oEjnem97er4",
     github: "https://github.com/Archit404Error/SemanticClassSearch",
     tech: "React, Flask, HF Transformers, Pinecone DB, EC2",
   },
