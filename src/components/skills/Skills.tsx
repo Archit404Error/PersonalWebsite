@@ -6,7 +6,7 @@ import { skills } from "./skillData";
 
 export const Skills = () => {
   return (
-    <div id="skills" className="mt-[-1rem]">
+    <div id="skills" className="mt-[-4rem] md:mt-[-1rem]">
       <div className="grid grid-cols-9 mt-32">
         <div className="mb-5 md:mb-0 block sm:hidden col-start-2 col-span-7">
           <SectionHeader

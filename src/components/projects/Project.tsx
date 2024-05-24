@@ -36,7 +36,7 @@ export const Project = ({
             src={image}
             width={500}
             height={500}
-            className="md:w-[50%] md:h-full xl:w-full xl:h-full"
+            className="mb-5 md:mb-0 md:w-[50%] md:h-full xl:w-full xl:h-full"
           />
         </div>
         <div className="col-start-3 col-span-9 md:col-start-2 md:col-span-10 xl:col-span-5">

@@ -77,7 +77,7 @@ const projectData: ProjectData[] = [
 
 export const Projects = () => {
   return (
-    <div id="projects" className="mt-10 bg-black">
+    <div id="projects" className="mt-0 md:mt-10 bg-black">
       <div className="grid grid-cols-9">
         <div className="col-start-2 col-span-7 lg:col-start-2 lg:col-span-5 mt-20 mb-10">
           <SectionHeader
