@@ -1,4 +1,4 @@
-import { ParallaxBubble, ParallaxBubbleProps } from "../animation/parallax";
+import { ParallaxBubble, ParallaxBubbleProps } from "../animation/Parallax";
 
 const parallaxData: ParallaxBubbleProps[] = [
   {

@@ -6,7 +6,7 @@ import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 import { CardBody } from "@nextui-org/react";
 import Image from "next/image";
 import { useRef } from "react";
-import { GradientCard } from "../animation/gradientCard";
+import { GradientCard } from "../animation/GradientCard";
 import { RoundButton } from "./RoundButton";
 
 export interface ProjectData {

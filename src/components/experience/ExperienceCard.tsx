@@ -1,7 +1,7 @@
 import { useIsVisibleOnce } from "@/hooks/useIsVisibleOnce";
 import Image from "next/image";
 import { useRef } from "react";
-import { GradientCard } from "../animation/gradientCard";
+import { GradientCard } from "../animation/GradientCard";
 
 export interface ExperienceCardProps {
   title: string;
