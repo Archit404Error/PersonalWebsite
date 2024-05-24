@@ -14,6 +14,8 @@ export interface ProjectData {
   tech?: string;
 }
 
+export type ProjectCardProps = Partial<ProjectData> & { visible: boolean };
+
 const projectData: ProjectData[] = [
   {
     title: "Cornell Course Engine",

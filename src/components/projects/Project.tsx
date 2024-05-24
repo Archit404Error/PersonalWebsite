@@ -6,7 +6,7 @@ import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 import { Card, CardBody } from "@nextui-org/react";
 import Image from "next/image";
 import { useRef } from "react";
-import { ProjectData } from "./Projects";
+import { ProjectCardProps, ProjectData } from "./Projects";
 import { RoundButton } from "./RoundButton";
 
 export const Project = ({
@@ -40,49 +40,80 @@ export const Project = ({
           />
         </div>
         <div className="col-start-3 col-span-9 md:col-start-2 md:col-span-10 xl:col-span-5">
-          <Card className="p-5 bg-[#18181b]">
-            <CardBody>
-              <h1 className="text-2xl sm:text-3xl md:text-4xl 2xl:text-5xl mb-4 font-bold">
-                {title}
-              </h1>
-              <div className="flex flex-row gap-5">
-                {url && (
-                  <RoundButton
-                    faIcon={faGlobe}
-                    buttonText="Website"
-                    url={url}
-                  />
-                )}
-                {appStore && (
-                  <RoundButton
-                    faIcon={faAppStore}
-                    buttonText="App Store"
-                    url={appStore}
-                  />
-                )}
-                {github && (
-                  <RoundButton
-                    faIcon={faGithub}
-                    buttonText="GitHub"
-                    url={github}
-                  />
-                )}
-              </div>
-              <p className="text-xl md:text-2xl mt-4">{description}</p>
-              {impact && (
-                <p className="text-xl md:text-xl mt-5">
-                  <span className="font-semibold">Impact:</span> {impact}
-                </p>
-              )}
-              {tech && (
-                <p className="text-xl md:text-xl mt-5">
-                  <span className="font-semibold">Tech:</span> {tech}
-                </p>
-              )}
-            </CardBody>
-          </Card>
+          <AnimatedCard
+            title={title}
+            description={description}
+            url={url}
+            appStore={appStore}
+            github={github}
+            impact={impact}
+            tech={tech}
+            visible={isVisible}
+          />
         </div>
       </div>
+    </div>
+  );
+};
+
+const AnimatedCard = ({
+  title,
+  description,
+  url,
+  appStore,
+  github,
+  impact,
+  tech,
+  visible,
+}: ProjectCardProps) => {
+  return (
+    <div className="grid grid-cols-1">
+      <Card
+        className={`bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 row-start-1 col-start-1 ease-in transition-all delay-800 ${
+          visible
+            ? "md:translate-x-5 md:translate-y-5"
+            : "md:translate-x-2.5 md:translate-y-2.5"
+        }`}
+      />
+      <Card
+        className={`p-5 bg-[#18181b] row-start-1 col-start-1 m-[1px] ease-in transition-all delay-800 ${
+          visible
+            ? "translate-x-0 translate-y-0"
+            : "md:translate-x-2.5 md:translate-y-2.5"
+        }`}
+      >
+        <CardBody>
+          <h1 className="text-2xl sm:text-3xl md:text-4xl 2xl:text-5xl mb-4 font-bold">
+            {title}
+          </h1>
+          <div className="flex flex-row gap-5">
+            {url && (
+              <RoundButton faIcon={faGlobe} buttonText="Website" url={url} />
+            )}
+            {appStore && (
+              <RoundButton
+                faIcon={faAppStore}
+                buttonText="App Store"
+                url={appStore}
+              />
+            )}
+            {github && (
+              <RoundButton faIcon={faGithub} buttonText="GitHub" url={github} />
+            )}
+          </div>
+          <p className="text-xl md:text-2xl mt-4">{description}</p>
+          {impact && (
+            <p className="text-xl md:text-xl mt-5">
+              <span className="font-semibold">Impact:</span> {impact}
+            </p>
+          )}
+          {tech && (
+            <p className="text-xl md:text-xl mt-5">
+              <span className="font-semibold">Tech:</span> {tech}
+            </p>
+          )}
+        </CardBody>
+      </Card>
     </div>
   );
 };

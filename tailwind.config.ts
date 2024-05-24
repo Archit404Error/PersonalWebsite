@@ -22,6 +22,8 @@ const config: Config = {
     "delay-800",
     "delay-1000",
     "delay-1200",
+    "w-0",
+    "w-full",
     ...[...Array(100).keys()].map((i) => `top-[${i * 10}px]`),
     ...[...Array(100).keys()].map((i) => `left-[${i * 10}px]`),
   ],
@@ -46,6 +48,9 @@ const config: Config = {
         "800": "800ms",
         "1000": "1000ms",
         "1200": "1200ms",
+      },
+      transitionProperty: {
+        width: "width",
       },
       screens: {
         macpro: "1512px",
