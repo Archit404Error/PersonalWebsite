@@ -1,20 +1,7 @@
 "use client";
 
 import { SectionHeader } from "../text/SectionHeader";
-import { Project } from "./Project";
-
-export interface ProjectData {
-  title: string;
-  description: string;
-  image: string;
-  url?: string;
-  appStore?: string;
-  github?: string;
-  impact?: string;
-  tech?: string;
-}
-
-export type ProjectCardProps = Partial<ProjectData> & { visible: boolean };
+import { Project, ProjectData } from "./Project";
 
 const projectData: ProjectData[] = [
   {

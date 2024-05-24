@@ -1,4 +1,4 @@
-import { useIsVisible } from "@/hooks/useIsVisible";
+import { useIsVisibleOnce } from "@/hooks/useIsVisibleOnce";
 import { useRef } from "react";
 
 interface SectionHeaderProps {
@@ -8,10 +8,10 @@ interface SectionHeaderProps {
 
 export const SectionHeader = ({ subtitle, title }: SectionHeaderProps) => {
   const subtitleRef = useRef(null);
-  const subtitleVisible = useIsVisible(subtitleRef);
+  const subtitleVisible = useIsVisibleOnce(subtitleRef);
 
   const titleRef = useRef(null);
-  const titleVisible = useIsVisible(titleRef);
+  const titleVisible = useIsVisibleOnce(titleRef);
 
   return (
     <>

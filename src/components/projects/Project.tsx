@@ -6,8 +6,20 @@ import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 import { Card, CardBody } from "@nextui-org/react";
 import Image from "next/image";
 import { useRef } from "react";
-import { ProjectCardProps, ProjectData } from "./Projects";
 import { RoundButton } from "./RoundButton";
+
+export interface ProjectData {
+  title: string;
+  description: string;
+  image: string;
+  url?: string;
+  appStore?: string;
+  github?: string;
+  impact?: string;
+  tech?: string;
+}
+
+type ProjectCardProps = Partial<ProjectData> & { visible: boolean };
 
 export const Project = ({
   title,
