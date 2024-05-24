@@ -1,7 +1,7 @@
 import { useIsVisibleOnce } from "@/hooks/useIsVisibleOnce";
-import { Card } from "@nextui-org/react";
 import Image from "next/image";
 import { useRef } from "react";
+import { GradientCard } from "../animation/gradientCard";
 
 export interface ExperienceCardProps {
   title: string;
@@ -12,10 +12,6 @@ export interface ExperienceCardProps {
   endDate: string;
   delay?: number;
 }
-
-type ExperienceOutlineCardProps = Partial<ExperienceCardProps> & {
-  visible: boolean;
-};
 
 export const ExperienceCard = ({
   title,
@@ -51,53 +47,20 @@ export const ExperienceCard = ({
         className="col-span-12 mb-5 rounded-xl w-[50%] justify-self-center md:hidden"
       />
       <div className="col-span-12 md:col-start-6 lg:col-start-5 lg:col-span-6 macpro:col-span-8">
-        <ExperienceOutlineCard
-          title={title}
-          organization={organization}
-          description={description}
-          startDate={startDate}
-          endDate={endDate}
-          visible={isVisible}
-        />
+        <GradientCard visible={isVisible}>
+          <div className="p-10">
+            <p className="text-3xl font-semibold">{title}</p>
+            <p className="text-xl font-thin mb-2">
+              {organization} ({startDate} - {endDate})
+            </p>
+            {description!.map((descStr) => (
+              <p key={descStr} className="text-lg mb-1 font-light">
+                •&nbsp;{descStr}
+              </p>
+            ))}
+          </div>
+        </GradientCard>
       </div>
-    </div>
-  );
-};
-
-const ExperienceOutlineCard = ({
-  title,
-  organization,
-  description,
-  startDate,
-  endDate,
-  visible,
-}: ExperienceOutlineCardProps) => {
-  return (
-    <div className="grid grid-cols-1">
-      <Card
-        className={`bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 row-start-1 col-start-1 ease-in transition-all delay-800 ${
-          visible
-            ? "md:translate-x-5 md:translate-y-5"
-            : "md:translate-x-2.5 md:translate-y-2.5"
-        }`}
-      />
-      <Card
-        className={`p-10 row-start-1 col-start-1 m-[1px] ease-in transition-all delay-800 ${
-          visible
-            ? "translate-x-0 translate-y-0"
-            : "md:translate-x-2.5 md:translate-y-2.5"
-        }`}
-      >
-        <p className="text-3xl font-semibold">{title}</p>
-        <p className="text-xl font-thin mb-2">
-          {organization} ({startDate} - {endDate})
-        </p>
-        {description!.map((descStr) => (
-          <p key={descStr} className="text-lg mb-1 font-light">
-            •&nbsp;{descStr}
-          </p>
-        ))}
-      </Card>
     </div>
   );
 };

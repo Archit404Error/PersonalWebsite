@@ -3,9 +3,10 @@
 import { useIsVisibleOnce } from "@/hooks/useIsVisibleOnce";
 import { faAppStore, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
-import { Card, CardBody } from "@nextui-org/react";
+import { CardBody } from "@nextui-org/react";
 import Image from "next/image";
 import { useRef } from "react";
+import { GradientCard } from "../animation/gradientCard";
 import { RoundButton } from "./RoundButton";
 
 export interface ProjectData {
@@ -79,21 +80,8 @@ const AnimatedCard = ({
   visible,
 }: ProjectCardProps) => {
   return (
-    <div className="grid grid-cols-1">
-      <Card
-        className={`bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 row-start-1 col-start-1 ease-in transition-all delay-800 ${
-          visible
-            ? "md:translate-x-5 md:translate-y-5"
-            : "md:translate-x-2.5 md:translate-y-2.5"
-        }`}
-      />
-      <Card
-        className={`p-5 bg-[#18181b] row-start-1 col-start-1 m-[1px] ease-in transition-all delay-800 ${
-          visible
-            ? "translate-x-0 translate-y-0"
-            : "md:translate-x-2.5 md:translate-y-2.5"
-        }`}
-      >
+    <GradientCard visible={visible}>
+      <div className="p-5 bg-[#18181b]">
         <CardBody>
           <h1 className="text-2xl sm:text-3xl md:text-4xl 2xl:text-5xl mb-4 font-bold">
             {title}
@@ -125,7 +113,7 @@ const AnimatedCard = ({
             </p>
           )}
         </CardBody>
-      </Card>
-    </div>
+      </div>
+    </GradientCard>
   );
 };
