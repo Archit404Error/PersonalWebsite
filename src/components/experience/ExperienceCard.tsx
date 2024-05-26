@@ -37,16 +37,16 @@ export const ExperienceCard = ({
         alt={`Archit Mehta: ${title} ${organization}`}
         width={300}
         height={300}
-        className="hidden mb-0 rounded-xl col-span-3 md:block xl:col-span-4"
+        className="hidden mb-0 rounded-xl col-span-3 lg:block xl:col-span-4"
       />
       <Image
         src={image}
         alt={`Archit Mehta: ${title} ${organization}`}
         width={300}
         height={300}
-        className="col-span-12 mb-5 rounded-xl w-[50%] justify-self-center md:hidden"
+        className="col-span-12 mb-5 rounded-xl w-[50%] justify-self-center lg:hidden"
       />
-      <div className="col-span-12 md:col-start-6 lg:col-start-5 lg:col-span-6 macpro:col-span-8">
+      <div className="col-span-12 lg:col-start-5 lg:col-span-6 macpro:col-span-8">
         <GradientCard visible={isVisible}>
           <div className="p-10">
             <p className="text-3xl font-semibold">{title}</p>
