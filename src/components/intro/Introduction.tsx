@@ -16,8 +16,8 @@ export const Introduction = () => {
         <RevealWrapper delay={200}>
           <p className="text-2xl 2xl:text-3xl 3xl:text-4xl">
             I&apos;m an avid programmer and entrepreneur who recently graduated
-            with a major in Computer Science and minor in Applied Mathematics
-            from Cornell University.
+            from Cornell University with a degree in Computer Science and minor
+            in Applied Mathematics.
           </p>
         </RevealWrapper>
         <RevealWrapper delay={400}>
