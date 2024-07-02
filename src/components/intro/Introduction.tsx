@@ -15,8 +15,9 @@ export const Introduction = () => {
         </RevealWrapper>
         <RevealWrapper delay={200}>
           <p className="text-2xl 2xl:text-3xl 3xl:text-4xl">
-            I&apos;m an avid programmer and entrepreneur currently studying
-            Computer Science and Applied Mathematics at Cornell University.
+            I&apos;m an avid programmer and entrepreneur who recently graduated
+            with a major in Computer Science and minor in Applied Mathematics
+            from Cornell University.
           </p>
         </RevealWrapper>
         <RevealWrapper delay={400}>
@@ -35,7 +36,7 @@ export const Introduction = () => {
         </RevealWrapper>
         <RevealWrapper delay={600}>
           <p className="text-2xl 2xl:text-3xl 3xl:text-4xl">
-            On campus, I&apos;m President of{" "}
+            On campus, I was President of{" "}
             <Link
               href="https://cornellappdev.com"
               target="_blank"
@@ -60,8 +61,8 @@ export const Introduction = () => {
             >
               Apple
             </Link>
-            , helping deliver maps for autonomous systems. After graduating,
-            I&apos;ll be working as a Software Engineer at{" "}
+            , helping deliver maps for autonomous systems. Now, I&apos;m working
+            as a Software Engineer at{" "}
             <Link
               href="https://stripe.com"
               target="_blank"
